@@ -18,6 +18,7 @@ namespace HW10
             int Sec = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Вы ввели угол: {0} градусов, {1} минут, {2} секунд", Gradus, Min, Sec);
             //Console.ReadKey();
+            //Angle angle = new Angle();
             Angle angle = new Angle();
             angle.ToRadians();
             Console.ReadKey();
@@ -35,12 +36,6 @@ namespace HW10
             rad = (Gradus + (Min + Sec / 60) / 60) * Math.PI / 180;
             Console.WriteLine("Значение угла в радианах равно: {0}", rad);
             //Console.ReadKey();
-        }
-        public Angle()
-        {
-            this.Gradus = gradus;
-            this.Min = min;
-            this.Sec = sec;
         }
         public int Gradus
         {
@@ -95,6 +90,12 @@ namespace HW10
             {
                 return sec;
             }
+        }
+         public Angle(int gradus)
+        {
+            this.Gradus = gradus;
+            this.Min = min;
+            this.Sec = sec;
         }
         ////public void Rad()
         //{
