@@ -19,7 +19,7 @@ namespace HW10
             Console.WriteLine("Вы ввели угол: {0} градусов, {1} минут, {2} секунд", Gradus, Min, Sec);
             //Console.ReadKey();
             //Angle angle = new Angle();
-            Angle angle = new Angle();
+            Angle angle = new Angle(Gradus, Min, Sec);
             angle.ToRadians();
             Console.ReadKey();
         }
@@ -91,7 +91,7 @@ namespace HW10
                 return sec;
             }
         }
-         public Angle(int gradus)
+         public Angle(int gradus, int min, int sec)
         {
             this.Gradus = gradus;
             this.Min = min;
